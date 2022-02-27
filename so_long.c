@@ -6,7 +6,7 @@
 /*   By: rmerzak <rmerzak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 23:05:15 by rmerzak           #+#    #+#             */
-/*   Updated: 2022/02/26 22:39:41 by rmerzak          ###   ########.fr       */
+/*   Updated: 2022/02/27 01:58:04 by rmerzak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	ft_move(int keycode, m_map *vars)
 		ft_move_right(vars);
 	else if (keycode == 53)
 		ft_exit(vars);
-	ft_printf("%d\n",vars->count_move);
 	return (0);
 }
 

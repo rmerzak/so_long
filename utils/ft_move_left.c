@@ -6,7 +6,7 @@
 /*   By: rmerzak <rmerzak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 18:46:20 by rmerzak           #+#    #+#             */
-/*   Updated: 2022/02/26 22:28:28 by rmerzak          ###   ########.fr       */
+/*   Updated: 2022/02/27 01:57:42 by rmerzak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	ft_move_left(m_map *vars)
 		vars->map_tab[vars->i][vars->j + 1] = 'P';
 		vars->map_tab[vars->i][vars->j] = '0';
 		vars->count_move++;
+		ft_printf("%d\n",vars->count_move);
 	}
 	else if (vars->map_tab[vars->i][vars->j + 1] == 'C')
 	{
@@ -27,6 +28,7 @@ void	ft_move_left(m_map *vars)
 		vars->map_tab[vars->i][vars->j] = '0';
 		vars->item--;
 		vars->count_move++;
+		ft_printf("%d\n",vars->count_move);
 	}
 	else if (vars->map_tab[vars->i][vars->j + 1] == 'E')
 		ft_check_fin(vars);
