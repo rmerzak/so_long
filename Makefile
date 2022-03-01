@@ -6,7 +6,7 @@
 #    By: rmerzak <rmerzak@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 22:39:49 by rmerzak           #+#    #+#              #
-#    Updated: 2022/02/26 22:39:06 by rmerzak          ###   ########.fr        #
+#    Updated: 2022/03/01 22:29:24 by rmerzak          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,8 @@ SRC =	so_long.c\
 		utils/ft_check_fin.c\
 		utils/ft_printf.c\
 		utils/ft_exit.c\
+		utils/ft_freetab.c\
+		utils/ft_check_walls.c\
 
 
 

@@ -6,7 +6,7 @@
 /*   By: rmerzak <rmerzak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 22:33:31 by rmerzak           #+#    #+#             */
-/*   Updated: 2022/02/26 22:38:48 by rmerzak          ###   ########.fr       */
+/*   Updated: 2022/03/01 22:52:21 by rmerzak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 # include<unistd.h>
 # include<stdlib.h>
 # include<mlx.h>
-#include <stdarg.h>
+# include<stdarg.h>
 
 typedef struct m_map
 {
 	int		height;
- 	int		width;
+	int		width;
 	int		x;
 	int		y;
 	void	*m_player;
@@ -43,28 +43,27 @@ typedef struct m_map
 	int		i;
 	int		j;
 	int		fin;
-}			m_map;
-// libft utils//
-
+}		t_map;
 char	*ft_strchr(char *str, int c);
-size_t		ft_strlen(char *str);
+size_t	ft_strlen(char *str);
 int		ft_strncmp(const char *s1, const char *s2, int n);
 char	*ft_strjoin(char *s1, char *s2);
-////
-char    *get_next_line(int fd);
-void	ft_print_erreur(int i);
-void	ft_is_good_map(char **av,m_map *map);
-void	ft_init(m_map *map);
+char	*get_next_line(int fd);
+void	ft_print_erreur(int i, t_map *map);
+void	ft_is_good_map(char **av, t_map *map);
+void	ft_init(t_map *map);
 char	*ft_join(char *s1, char *s2);
 char	*ft_substr(char *s, unsigned int start, size_t len);
-void ft_print_full(m_map *map);
-void	ft_move_up(m_map *vars);
-void	ft_move_down(m_map *vars);
-void	ft_move_left(m_map *vars);
-void	ft_move_right(m_map *vars);
-int		ft_find_player(m_map *vars);
-void	ft_check_fin(m_map *map);
-int ft_printf(const char *str, ...);
-void	ft_exit(m_map *vars);
+void	ft_print_full(t_map *map);
+void	ft_move_up(t_map *vars);
+void	ft_move_down(t_map *vars);
+void	ft_move_left(t_map *vars);
+void	ft_move_right(t_map *vars);
+int		ft_find_player(t_map *vars);
+void	ft_check_fin(t_map *map);
+int		ft_printf(const char *str, ...);
+void	ft_exit(t_map *vars);
+void	ft_freetab(t_map *map);
+int		ft_check_walls(t_map *map);
 
 #endif

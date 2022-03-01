@@ -1,41 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_join.c                                          :+:      :+:    :+:   */
+/*   ft_freetab.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmerzak <rmerzak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 18:50:12 by rmerzak           #+#    #+#             */
-/*   Updated: 2022/03/01 22:06:50 by rmerzak          ###   ########.fr       */
+/*   Created: 2022/03/01 19:09:12 by rmerzak           #+#    #+#             */
+/*   Updated: 2022/03/01 22:42:52 by rmerzak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-char	*ft_join(char *s1, char *s2)
+void	ft_freetab(t_map *map)
 {
-	char	*s;
-	size_t	k;
-	size_t	l;
+	int	i;
 
-	k = 0;
-	l = 0;
-	if (!s1 || !s2)
-		return (NULL);
-	s = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
-	if (!s)
-		return (NULL);
-	while (s1[k] != '\0')
-	{
-		s[k] = s1[k];
-		k++;
-	}
-	while (s2[l] != '\0')
-	{
-		s[k] = s2[l];
-		l++;
-		k++;
-	}
-	s[k] = '\0';
-	return (s);
+	i = 0;
+	if (!map->map_tab)
+		return ;
+	while (map->map_tab[i++])
+		free(map->map_tab[i]);
+	free(map->map_tab[i]);
 }
