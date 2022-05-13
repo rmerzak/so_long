@@ -36,7 +36,7 @@ int	main(int argc, char **av)
 	if (argc < 2)
 		ft_print_erreur(0, NULL);
 	ft_init(&map);
-	ft_is_good_map(av, &map);
+	ft_is_good_map(av, &map); 
 	h = map.width * 75;
 	w = map.height * 75;
 	map.mlx = mlx_init();
